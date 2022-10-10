@@ -7,3 +7,70 @@
 .bkImage {
     position: relative;
 }
+
+example-header-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgDiv {
+  height: 300px;
+  margin-bottom: 1rem;
+  img {
+    height: 100%;
+  }
+}
+
+
+.paragraph {
+text-align: center;
+}
+
+/* მობილური */
+@media only screen and (max-width: 600px) {
+.bkImage {
+  height: 35%;
+}
+
+.swimmersDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;margin-bottom: 3rem;
+}
+.swimmersCards {
+  width: 300px;
+  margin: auto;
+  margin-top: 2rem;
+}
+}
+
+  /* კომპიუტერი */
+  @media screen and (min-width: 600px) {
+    .bkImage {
+      height: 60%;
+    }
+
+    .swimmersDiv {
+      position: relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      flex-direction: column;margin-bottom: 3rem;
+    }
+
+    .swimmersCards {
+      width: 400px;
+      margin: auto;
+      margin-top: 2rem;
+    }
+    
+  }

@@ -1,3 +1,36 @@
 <div class="bkImage">
-    <img class="img1" src="https://kyuw0olnhx1fan3s3n98im5t-wpengine.netdna-ssl.com/wp-content/uploads/Whats-The-Right-Age-For-Kids-To-Start-Swimming-Competitively-Blog.jpg" />
+  <img
+    class="img1"
+    src="https://kyuw0olnhx1fan3s3n98im5t-wpengine.netdna-ssl.com/wp-content/uploads/Whats-The-Right-Age-For-Kids-To-Start-Swimming-Competitively-Blog.jpg"
+  />
+</div>
+
+<div class="search">
+  <mat-form-field>
+  <mat-label>Search Swimmer</mat-label>
+  <input matInput (keyup)="getSwimmerName($event)">
+</mat-form-field>
+</div>
+
+
+
+<div class="swimmersDiv">
+  <div *ngFor="let swimmer of filteredSwimmers" class="swimmersCards shadow">
+    <mat-card class="swimmer-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ swimmer.name }}</mat-card-title>
+        <mat-card-subtitle>Born: {{ swimmer.dateOfBirth }}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="imgDiv">
+        <img mat-card-image [src]="swimmer.img" alt="/" />
+      </div>
+
+      <mat-card-content>
+        <div class="paragraph">
+          {{ swimmer.bio }}
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
+</div>
