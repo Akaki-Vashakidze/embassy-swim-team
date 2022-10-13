@@ -20,6 +20,26 @@
     text-align: center;
 }
 
+.fbIcon {
+  font-size: 26px;
+}
+
+.contact-card {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+
+  margin-top: 6rem;
+}
+
+.header{
+  text-align: center;
+}
 
 
 /* კომპიუტერი */
@@ -28,9 +48,6 @@
     font-size: 40px;
 }
 
-.main-bk-div {
-  height: 60%;
-}
 }
 
 
@@ -38,9 +55,6 @@
 @media only screen and (max-width: 600px) {
   .text {
     font-size: 18px;
-  }
-  .main-bk-div {
- height: 35%;
   }
 }
 

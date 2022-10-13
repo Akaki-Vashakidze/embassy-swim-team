@@ -42,7 +42,7 @@ export class AppComponent {
       name: 'Contact',
       icon: 'contact_phone',
       style: '',
-      route: '/',
+      route: '/contact',
     },
   ]
 }

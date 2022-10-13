@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, } from '@angular/forms';
 import { SwimmersComponent } from './swimmers/swimmers.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    SwimmersComponent
+    SwimmersComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 
 .img1 {
     width: 100%;
-    height: 100%;
   }
 
 .bkImage {
@@ -36,9 +35,7 @@ text-align: center;
 
 /* მობილური */
 @media only screen and (max-width: 600px) {
-.bkImage {
-  height: 35%;
-}
+
 
 .swimmersDiv {
   position: relative;
@@ -55,9 +52,7 @@ text-align: center;
 
   /* კომპიუტერი */
   @media screen and (min-width: 600px) {
-    .bkImage {
-      height: 60%;
-    }
+   
 
     .swimmersDiv {
       position: relative;
