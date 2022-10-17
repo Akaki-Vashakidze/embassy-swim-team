@@ -1,0 +1,68 @@
+<div class="formDiv">
+    <form [formGroup]="userForm" class="form">
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Name:</mat-label>
+            <input formControlName="FirstName" #name matInput />
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Last name:</mat-label>
+            <input formControlName="LastName" #lastName matInput />
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Username:</mat-label>
+            <input formControlName="UserName" #username matInput />
+            <mat-hint>Min 5 characters</mat-hint>
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="Gender" #gender>
+              <mat-option value="male">male</mat-option>
+              <mat-option value="female">female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Gmail:</mat-label>
+            <input formControlName="Gmail" #gmail matInput />
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Mobile number:</mat-label>
+            <input formControlName="Number" #number matInput />
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Password:</mat-label>
+            <input formControlName="Password1" #password1 type="password" matInput />
+            <mat-hint>Min 7 characters</mat-hint>
+          </mat-form-field>
+        </div>
+      
+        <div class="form-input">
+          <mat-form-field color="accent">
+            <mat-label>Repeat Password:</mat-label>
+            <input formControlName="Password2" #password2 type="password" matInput />
+            <mat-hint>Min 7 characters</mat-hint>
+          </mat-form-field>
+        </div>
+        <button (click)="saveForm()" mat-raised-button>Sign Up</button>
+        <button  mat-raised-button>Sign In</button>
+      </form>
+      
+</div>

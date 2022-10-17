@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponentsComponent } from './login-components/login-components.component';
+import { SharedService } from './shared.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(public dialog:MatDialog,private sharedService:SharedService){}
+  signedIn:boolean = false;
   opened = false;
   menu = [
     {
@@ -45,4 +50,24 @@ export class AppComponent {
       route: '/contact',
     },
   ]
+
+  dialogRef:any;
+
+  ngOnInit(): void {
+      this.sharedService.loggedInUser.subscribe(item => {
+        this.signedIn = item;
+        if(item) {
+          this.dialogRef.close();
+        }
+      })
+  }
+
+  openDialog(){
+  this.dialogRef = this.dialog.open(LoginComponentsComponent);
+  }
+
+  logOut = () => {
+    this.sharedService.userOut();
+  }
+
 }

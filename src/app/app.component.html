@@ -3,13 +3,18 @@
     <mat-toolbar-row>
       <mat-icon (click)="opened = !opened">menu</mat-icon>
       <div class="sidenav-toggle" (click)="opened = !opened">Menu</div>
-      <div class="sign">
-        <span class="signs">Sign In</span>
-        <span class="signs">Sign Up</span>
+      <div *ngIf="!signedIn" class="sign">
+        <span (click)="openDialog()" class="signs">Sign In</span>
+        <span routerLink="/signUp" class="signs">Sign Up</span>
+      </div>
+      <div *ngIf="signedIn" class="sign">
+        <span (click)="logOut()" class="signs">Log Out</span>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+
+
 
 <mat-sidenav-container>
   <mat-sidenav class="sidenav" mode="side" [(opened)]="opened">

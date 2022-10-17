@@ -1,0 +1,14 @@
+<div class="loginInputs">
+  <mat-form-field color="accent">
+    <mat-label>Username:</mat-label>
+    <input #username matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Repeat Password:</mat-label>
+    <input #password type="password" matInput />
+  </mat-form-field>
+</div>
+<div>
+    <button mat-button (click)="checkUser(password,username)">Sign In</button>
+    <button mat-button mat-dialog-close mat-dialog-close="" >Forget pass?</button>
+</div>

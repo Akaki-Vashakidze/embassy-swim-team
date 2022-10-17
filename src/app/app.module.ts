@@ -9,20 +9,27 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, } from '@angular/forms';
 import { SwimmersComponent } from './swimmers/swimmers.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponentsComponent } from './login-components/login-components.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     SwimmersComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponentsComponent,
+    SignUpComponent
   ],
+  entryComponents: [LoginComponentsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
